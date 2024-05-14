@@ -40,6 +40,7 @@ namespace StudentPortal.Web.Controllers
         public async Task <IActionResult> List() 
         {
             var students=await _dbContext.Students.ToListAsync();
+            return View(students);
         }
     }
 }
